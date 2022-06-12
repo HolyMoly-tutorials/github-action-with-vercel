@@ -1,0 +1,19 @@
+name: 'branch-push-action'
+
+on: 
+  push:                               
+    branches:
+      - master    # master Branch에서 push 이벤트가 일어났을 때만 실행
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code.   # 레포지토리 체크아웃
+      - uses: actions/checkout@v2
+
+      - name : Checkout git config    # git config 변경
+        run : git config user.name holoymoly-bot
+
+      - name: Push HEAD commit # HEAD 커밋 재 push
+        run : git push origin HEAD
