@@ -4,3 +4,5 @@
   - PR 오픈됐을 때, 최근 커밋(HEAD) bot 계정으로 한번 더 push
   - PR 머지됐을 때, 최근 커밋(HEAD) bot 계정으로 한번 더 push
   - main 브랜 치 push 됐을 때, bot 계정으로 한번 더 push
+
+  
